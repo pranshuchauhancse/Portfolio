@@ -34,6 +34,8 @@ function Hero() {
         <div className="hero-card" role="banner" aria-label="Intro">
           <div className="hero-grid">
             <div className="hero-copy">
+              <p className="hero-status">Open to internships, freelance projects, and collaborations</p>
+
               <motion.p className="hero-kicker" {...kickerMotionProps}>
                 Hello, I am <span className="hero-kicker-strong">Pranshu Chauhan</span>
               </motion.p>
@@ -62,17 +64,16 @@ function Hero() {
               </p>
             </div>
 
-            <motion.div className="hero-media" {...mediaMotionProps}>
+            <motion.div className="hero-media" tabIndex={0} {...mediaMotionProps}>
               <img className="hero-portrait" src={portrait} alt="Portrait" />
               <div className="hero-media-scrim" aria-hidden="true" />
+              <div className="hero-media-caption" aria-label="Profile details">
+                <h4>Pranshu Chauhan</h4>
+                <p>Student</p>
+                <p>GLA University</p>
+              </div>
             </motion.div>
           </div>
-
-          <Link className="hero-scroll" to="/about" aria-label="Go to About page">
-            <span className="hero-scroll-icon" aria-hidden="true">
-              ⌄
-            </span>
-          </Link>
         </div>
       </div>
     </section>
