@@ -7,17 +7,27 @@ import { Link } from "../router";
 const exploreCards = [
   {
     title: "About",
-    desc: "Learn more about who I am and what I create.",
+    desc: "Get a quick overview of my background, work style, and strengths.",
     to: "/about"
   },
   {
     title: "Projects",
-    desc: "Explore my work, projects, and practical implementations.",
+    desc: "Browse shipped projects with tech stack, details, and outcomes.",
     to: "/projects"
   },
   {
+    title: "Case Studies",
+    desc: "See how I approach problems from discovery to delivery.",
+    to: "/case-studies"
+  },
+  {
+    title: "Timeline",
+    desc: "Follow my growth path through learning, building, and collaboration.",
+    to: "/timeline"
+  },
+  {
     title: "Contact",
-    desc: "Get in touch or send me a message.",
+    desc: "Reach out for internships, freelance work, or collaboration.",
     to: "/contact"
   }
 ];
@@ -27,7 +37,10 @@ function HomePage() {
     <>
       <Hero />
       <section className="section section-shell">
-        <h2>Explore</h2>
+        <h2>Explore My Portfolio</h2>
+        <p className="lead">
+          Every section is designed to give recruiters and collaborators a clear picture of how I think, build, and deliver.
+        </p>
         <div className="cards-grid">
           {exploreCards.map((item, index) => (
             <motion.article

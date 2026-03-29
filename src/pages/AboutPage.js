@@ -21,36 +21,40 @@ function AboutPage() {
       </motion.h2>
       <motion.div {...contentMotionProps}>
         <p>
-          I am a <strong>motivated</strong> and <strong>curious Software Engineer</strong> with a strong passion for <strong>learning new skills</strong> and transforming ideas into <strong>impactful, real-world projects</strong>. I specialize in <strong>modern web development</strong>, where I enjoy turning <strong>complex challenges</strong> into <strong>simple, elegant solutions</strong>.
+          I am a software engineer who enjoys building dependable web products from end to end.
+          I like taking a feature from idea to release, from planning the data model to polishing the final user flow.
         </p>
 
         <p>
-          With hands-on experience in building <strong>Web applications</strong> using the <strong>MERN stack</strong> and developing <strong>basic ML models projects</strong>, I focus on writing <strong>clean</strong>, <strong>maintainable code</strong> and delivering <strong>high-performance</strong>, <strong>scalable websites</strong>.
+          My core stack is React, Node.js, Express, and MongoDB.
+          I care about readable code, maintainable structure, and interfaces that are simple for users but robust under real usage.
         </p>
 
         <p>
-          I am deeply committed to <strong>continuous learning</strong>, constantly exploring <strong>new technologies</strong> and <strong>best practices</strong> to stay up-to-date in an <strong>ever-evolving field</strong>.
+          Beyond coding, I invest time in continuous learning, open-source contribution, and peer collaboration.
+          Each project helps me sharpen both technical depth and communication.
         </p>
 
         <p>
-          Driven by <strong>problem-solving</strong> and <strong>creativity</strong>, I strive to create <strong>meaningful digital experiences</strong> while growing <strong>professionally</strong> with every project I undertake. I believe in <strong>dedication</strong>, <strong>innovation</strong>, and <strong>consistent improvement</strong> as the foundation for <strong>long-term success</strong>.
+          If you are looking for someone who combines execution speed with thoughtful engineering decisions,
+          I would love to connect and build something valuable together.
         </p>
       </motion.div>
       <div className="page-split">
         <article className="card">
-          <h3>What I do</h3>
+          <h3>What I Build</h3>
           <ul className="bullets">
-            <li>UI engineering with React</li>
-            <li>Component systems + design tokens</li>
-            <li>Performance audits and fixes</li>
+            <li>Responsive frontend applications with React</li>
+            <li>REST APIs and backend services with Node.js</li>
+            <li>Portfolio, dashboard, and productivity web apps</li>
           </ul>
         </article>
         <article className="card">
-          <h3>What you get</h3>
+          <h3>How I Work</h3>
           <ul className="bullets">
-            <li>Responsive, accessible layouts</li>
-            <li>Clean, maintainable code</li>
-            <li>Animations that feel premium</li>
+            <li>Clear communication and milestone-based delivery</li>
+            <li>Readable code with practical documentation</li>
+            <li>Performance, accessibility, and maintainability in focus</li>
           </ul>
         </article>
       </div>

@@ -15,8 +15,11 @@ function Resume() {
           <li key={item}>{item}</li>
         ))}
       </ul>
-      <a className="btn btn-primary" href="/resume.pdf">
-        Download Resume
+      <a
+        className="btn btn-primary"
+        href="mailto:pranshuchauhan121005@gmail.com?subject=Resume%20Request&body=Hi%20Pranshu%2C%20please%20share%20your%20latest%20resume."
+      >
+        Request Resume by Email
       </a>
     </section>
   );

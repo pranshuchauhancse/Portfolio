@@ -11,16 +11,25 @@ function ResumePage() {
   return (
     <section className="section section-shell">
       <motion.h2 {...headingMotionProps}>
-        Resume / Experience
+        Resume and Experience
       </motion.h2>
-      <p className="lead">A short timeline. Download the full PDF if you want the complete details.</p>
+
+      <p className="lead">
+        A concise summary of my current focus, project experience, and technical strengths.
+      </p>
+
       <ul className="timeline-list">
-        <li>Frontend Developer Intern — 2025</li>
-        <li>BSc Computer Science</li>
-        <li>3+ Professional Certifications</li>
+        <li>Built full-stack portfolio and product-style projects using the MERN stack</li>
+        <li>Strong foundation in React-based UI architecture and reusable component design</li>
+        <li>Hands-on backend development with Express APIs and MongoDB data modeling</li>
+        <li>Active learner with certifications and consistent project-based practice</li>
       </ul>
-      <a className="btn btn-primary" href="/resume.pdf">
-        Download Resume
+
+      <a
+        className="btn btn-primary"
+        href="mailto:pranshuchauhan121005@gmail.com?subject=Resume%20Request&body=Hi%20Pranshu%2C%20please%20share%20your%20latest%20resume."
+      >
+        Request Resume by Email
       </a>
     </section>
   );

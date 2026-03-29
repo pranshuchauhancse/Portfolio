@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { FaBars, FaTimes } from "react-icons/fa";
+import { FaBars, FaTimes, FaGithub, FaLinkedin, FaTwitter, FaEnvelope } from "react-icons/fa";
 import { Link, usePathname } from "../router";
 
 const navigationItems = [
@@ -8,7 +8,19 @@ const navigationItems = [
   { label: "Skills", href: "/skills" },
   { label: "Projects", href: "/projects" },
   { label: "Resume", href: "/resume" },
+  { label: "Timeline", href: "/timeline" },
+  { label: "Certifications", href: "/certifications" },
+  { label: "Co-Curricular", href: "/cocurricular" },
+  { label: "Testimonials", href: "/testimonials" },
+  { label: "Case Studies", href: "/case-studies" },
   { label: "Contact", href: "/contact" }
+];
+
+const socialLinks = [
+  { icon: FaGithub, url: "https://github.com/pranshuchauhancse", label: "GitHub" },
+  { icon: FaLinkedin, url: "https://www.linkedin.com/in/pranshu-chauhan-731265290/", label: "LinkedIn" },
+  { icon: FaTwitter, url: "https://x.com/pranshu121005", label: "Twitter" },
+  { icon: FaEnvelope, url: "mailto:pranshuchauhan121005@gmail.com", label: "Email" }
 ];
 
 function Navbar() {
@@ -45,6 +57,23 @@ function Navbar() {
         ))}
       </ul>
 
+      <div className="nav-right">
+        <div className="nav-socials">
+          {socialLinks.map((social) => (
+            <a
+              key={social.label}
+              href={social.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="nav-social-link"
+              title={social.label}
+            >
+              <social.icon />
+            </a>
+          ))}
+        </div>
+      </div>
+
       <button
         className="nav-toggle"
         type="button"
@@ -58,7 +87,7 @@ function Navbar() {
       <div className={isOpen ? "nav-drawer nav-drawer-open" : "nav-drawer"}>
         <div className="nav-drawer-panel" role="dialog" aria-label="Navigation menu">
           <div className="nav-drawer-header">
-            <span className="logo">DevPortfolio</span>
+            <span className="logo">Pranshu Portfolio</span>
             <button className="nav-toggle" type="button" aria-label="Close menu" onClick={() => setIsOpen(false)}>
               <FaTimes />
             </button>

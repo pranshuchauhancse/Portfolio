@@ -46,7 +46,7 @@ function ProjectsPage() {
       <div className="filters">
         <label className="filter">
           <span className="filter-label">Search</span>
-          <input value={query} onChange={(e) => setQuery(e.target.value)} placeholder="Type to filter…" />
+          <input value={query} onChange={(e) => setQuery(e.target.value)} placeholder="Type to filter..." />
         </label>
         <div className="tags" role="tablist" aria-label="Project tags">
           {sortedTags.map((tag) => {
@@ -68,36 +68,40 @@ function ProjectsPage() {
       </div>
 
       <div className="projects-grid-wide">
-        {filtered.map((project, index) => (
-          <motion.article
-            key={project.slug}
-            className="project-card"
-            initial={{ opacity: 0, y: 14 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            whileHover={{ y: -6 }}
-            viewport={{ once: true }}
-            transition={{ delay: index * 0.06 }}
-          >
-            <h3>{project.title}</h3>
-            <p>{project.desc}</p>
-            <div className="pill-row" aria-label="Project tags">
-              {project.tags.map((tag) => (
-                <span key={tag} className="pill">
-                  {tag}
-                </span>
-              ))}
-            </div>
-            <div className="project-links">
-              <Link to={`/projects/${project.slug}`}>Details</Link>
-              <a href={project.links.github} target="_blank" rel="noreferrer">
-                GitHub
-              </a>
-              <a href={project.links.demo} target="_blank" rel="noreferrer">
-                Live Demo
-              </a>
-            </div>
-          </motion.article>
-        ))}
+        {filtered.map((project, index) => {
+          const liveUrl = project.links.demo && project.links.demo !== "#" ? project.links.demo : project.links.github;
+
+          return (
+            <motion.article
+              key={project.slug}
+              className="project-card"
+              initial={{ opacity: 0, y: 14 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              whileHover={{ y: -6 }}
+              viewport={{ once: true }}
+              transition={{ delay: index * 0.06 }}
+            >
+              <h3>{project.title}</h3>
+              <p>{project.desc}</p>
+              <div className="pill-row" aria-label="Project tags">
+                {project.tags.map((tag) => (
+                  <span key={tag} className="pill">
+                    {tag}
+                  </span>
+                ))}
+              </div>
+              <div className="project-links">
+                <Link to={`/projects/${project.slug}`}>Details</Link>
+                <a href={project.links.github} target="_blank" rel="noreferrer">
+                  GitHub
+                </a>
+                <a href={liveUrl} target="_blank" rel="noreferrer">
+                  Live Demo
+                </a>
+              </div>
+            </motion.article>
+          );
+        })}
       </div>
     </section>
   );

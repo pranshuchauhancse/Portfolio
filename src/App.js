@@ -1,15 +1,24 @@
+import React, { Suspense, lazy } from "react";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import LoadingSkeleton from "./components/LoadingSkeleton";
 import { RouteView, usePathname } from "./router";
 import { AnimatePresence, motion } from "framer-motion";
-import HomePage from "./pages/HomePage";
-import AboutPage from "./pages/AboutPage";
-import SkillsPage from "./pages/SkillsPage";
-import ProjectsPage from "./pages/ProjectsPage";
-import ProjectDetailPage from "./pages/ProjectDetailPage";
-import ResumePage from "./pages/ResumePage";
-import ContactPage from "./pages/ContactPage";
-import NotFoundPage from "./pages/NotFoundPage";
+
+const HomePage = lazy(() => import("./pages/HomePage"));
+const AboutPage = lazy(() => import("./pages/AboutPage"));
+const SkillsPage = lazy(() => import("./pages/SkillsPage"));
+const ProjectsPage = lazy(() => import("./pages/ProjectsPage"));
+const ProjectDetailPage = lazy(() => import("./pages/ProjectDetailPage"));
+const ResumePage = lazy(() => import("./pages/ResumePage"));
+const ContactPage = lazy(() => import("./pages/ContactPage"));
+const CertificationsPage = lazy(() => import("./pages/CertificationsPage"));
+const CoCurricularPage = lazy(() => import("./pages/CoCurricularPage"));
+const TimelinePage = lazy(() => import("./pages/TimelinePage"));
+const TestimonialsPage = lazy(() => import("./pages/TestimonialsPage"));
+const CaseStudiesPage = lazy(() => import("./pages/CaseStudiesPage"));
+const CaseStudyDetailPage = lazy(() => import("./pages/CaseStudyDetailPage"));
+const NotFoundPage = lazy(() => import("./pages/NotFoundPage"));
 
 const appRoutes = [
   { path: "/", title: "Home", component: HomePage },
@@ -18,6 +27,12 @@ const appRoutes = [
   { path: "/projects", title: "Projects", component: ProjectsPage },
   { path: "/projects/:slug", title: "Project", component: ProjectDetailPage },
   { path: "/resume", title: "Resume", component: ResumePage },
+  { path: "/timeline", title: "Timeline", component: TimelinePage },
+  { path: "/certifications", title: "Certifications", component: CertificationsPage },
+  { path: "/cocurricular", title: "Co-Curricular", component: CoCurricularPage },
+  { path: "/testimonials", title: "Testimonials", component: TestimonialsPage },
+  { path: "/case-studies", title: "Case Studies", component: CaseStudiesPage },
+  { path: "/case-studies/:slug", title: "Case Study", component: CaseStudyDetailPage },
   { path: "/contact", title: "Contact", component: ContactPage },
   { path: "*", title: "Not Found", component: NotFoundPage },
 ];
@@ -38,7 +53,9 @@ function App() {
             exit={{ opacity: 0, y: -8 }}
             transition={{ duration: 0.22, ease: "easeOut" }}
           >
-            <RouteView pathname={pathname} routes={appRoutes} />
+            <Suspense fallback={<LoadingSkeleton />}>
+              <RouteView pathname={pathname} routes={appRoutes} />
+            </Suspense>
           </motion.div>
         </AnimatePresence>
       </main>

@@ -35,16 +35,16 @@ function Hero() {
           <div className="hero-grid">
             <div className="hero-copy">
               <motion.p className="hero-kicker" {...kickerMotionProps}>
-                Hi, I am <span className="hero-kicker-strong">Pranshu Chauhan</span>
-                
+                Hello, I am <span className="hero-kicker-strong">Pranshu Chauhan</span>
               </motion.p>
 
               <motion.p className="hero-tagline" {...taglineMotionProps}>
-                <span className="hero-highlight"><span>Software Engineer & Full Stack Developer</span></span>
-                {" "}
-                
+                <span className="hero-highlight"><span>Software Engineer and Full Stack Developer</span></span>
               </motion.p>
-              <p>I build scalable web applications and AI-powered solutions using the MERN stack, with a focus on performance, usability, and clean code.</p>
+              <p>
+                I design and build practical digital products with React, Node.js, and MongoDB.
+                My focus is simple: fast interfaces, clean architecture, and features that solve real user problems.
+              </p>
 
               <motion.div className="hero-buttons" {...buttonsMotionProps}>
                 <Link className="btn btn-ghost" to="/about">
@@ -54,10 +54,13 @@ function Hero() {
                   View My Work
                 </Link>
               </motion.div>
-              <p><strong>Passionate about solving real-world problems through full-stack development and intelligent systems.</strong></p>
-            
+
+              <p>
+                <strong>
+                  Currently focused on modern frontend systems, API-first backends, and reliable deployment workflows.
+                </strong>
+              </p>
             </div>
-            
 
             <motion.div className="hero-media" {...mediaMotionProps}>
               <img className="hero-portrait" src={portrait} alt="Portrait" />

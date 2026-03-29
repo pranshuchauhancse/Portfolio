@@ -13,11 +13,12 @@ const headingMotionProps = {
 function ProjectDetailPage({ params }) {
   // Find the project using the slug from the URL: `/projects/:slug`.
   const project = getProjectBySlug(params.slug);
+  const liveUrl = project?.links?.demo && project.links.demo !== "#" ? project.links.demo : project?.links?.github;
   if (!project) {
     return (
       <section className="section section-shell">
         <h2>Project not found</h2>
-        <p className="lead">That project page doesn’t exist.</p>
+        <p className="lead">That project page does not exist.</p>
         <Link className="btn btn-ghost" to="/projects">
           Back to Projects
         </Link>
@@ -61,7 +62,7 @@ function ProjectDetailPage({ params }) {
             <a href={project.links.github} target="_blank" rel="noreferrer">
               GitHub
             </a>
-            <a href={project.links.demo} target="_blank" rel="noreferrer">
+            <a href={liveUrl} target="_blank" rel="noreferrer">
               Live Demo
             </a>
           </div>

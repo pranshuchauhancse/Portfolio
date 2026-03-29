@@ -4,7 +4,10 @@ export const projects = [
     title: "Cash Craft – Personal Finance Management System",
     desc: "A MERN-based finance management application for budgeting and expense tracking.",
     tags: ["MongoDB", "Express.js", "React.js", "Node.js", "JavaScript"],
-    links: { github: "https://github.com/pranshuchauhancse/Cash-Craft-The-Smart-Budget-System", demo: "#" },
+    links: {
+      github: "https://github.com/pranshuchauhancse/Cash-Craft-The-Smart-Budget-System",
+      demo: "https://github.com/pranshuchauhancse/Cash-Craft-The-Smart-Budget-System"
+    },
     highlights: [
       "Built budgeting + expense tracking flows",
       "React dashboard to visualize transactions and daily spending",
@@ -17,7 +20,10 @@ export const projects = [
     title: "Nyay-AI – AI Legal Assistance System",
     desc: "An AI-powered legal assistance platform that provides guidance through natural language queries.",
     tags: ["Python", "NLP", "OpenAI API"],
-    links: { github: "https://github.com/pranshuchauhancse/Nyay-AI-AI-Legal-Assistance-System", demo: "#" },
+    links: {
+      github: "https://github.com/pranshuchauhancse/Nyay-AI-AI-Legal-Assistance-System",
+      demo: "https://github.com/pranshuchauhancse/Nyay-AI-AI-Legal-Assistance-System"
+    },
     highlights: [
       "Guidance via natural language queries",
       "Integrated OpenAI APIs with a custom legal dataset",

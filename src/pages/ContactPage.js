@@ -74,8 +74,8 @@ function ContactPage() {
         Contact
       </motion.h2>
       <p className="lead">
-        Feel free to reach out if you have a project idea, collaboration opportunity, or just want to connect. I’m always open to meaningful conversations and new opportunities.
-        <span className="inline-code">{CONTACT_EMAIL}</span>.
+        Have an internship opportunity, project idea, or collaboration in mind?
+        Share a few details and I will get back to you as soon as possible.
       </p>
 
       <div className="page-split">
@@ -106,14 +106,14 @@ function ContactPage() {
           />
           <div className="row">
             <button className="btn btn-primary" type="submit">
-              {isSending ? "Sending..." : "Send"}
+              {isSending ? "Sending..." : "Send Message"}
             </button>
           </div>
           {status ? <p className="form-status">{status}</p> : null}
         </form>
 
         <article className="card">
-          <h3>Quick info</h3>
+          <h3>Quick Info</h3>
           <ul className="bullets">
             <li>
               Email:{" "}
@@ -138,7 +138,7 @@ function ContactPage() {
             </li>
           </ul>
           <p className="muted">
-            Location: {contact.location} | Timezone: {contact.timezone}
+            Location: {contact.location} | Time zone: {contact.timezone}
           </p>
         </article>
       </div>
