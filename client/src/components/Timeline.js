@@ -1,4 +1,4 @@
-import React from "react";
+﻿import React from "react";
 import { motion } from "framer-motion";
 
 const containerVariants = {
@@ -22,6 +22,8 @@ const itemVariants = {
 };
 
 function Timeline({ items }) {
+  const getPrefix = (listType) => (listType === "checklist" ? "✓ " : "• ");
+
   return (
     <motion.div
       className="timeline-container"
@@ -31,7 +33,7 @@ function Timeline({ items }) {
     >
       <h2 className="section-title">My Journey</h2>
       <div className="timeline-line">
-        {items.map((item, index) => (
+        {items.map((item) => (
           <motion.div
             key={item.id}
             className="timeline-item"
@@ -45,15 +47,41 @@ function Timeline({ items }) {
               whileHover={{ scale: 1.02, x: 10 }}
             >
               <h3 className="timeline-title">{item.title}</h3>
-              <p className="timeline-company">{item.company}</p>
-              <p className="timeline-duration">{item.duration}</p>
+              <p className="timeline-company">
+                {item.company} | {item.duration}
+              </p>
+              {item.stream && <p className="timeline-stream">Stream: {item.stream}</p>}
               <p className="timeline-desc">{item.description}</p>
+
+              {item.sections &&
+                item.sections.map((section, sectionIndex) => (
+                  <div
+                    className="timeline-section"
+                    key={`${item.id}-section-${sectionIndex}`}
+                  >
+                    <p className="timeline-section-title">{section.title}</p>
+                    <ul className="timeline-section-list">
+                      {section.items.map((sectionItem, sectionItemIndex) => (
+                        <li
+                          key={`${item.id}-section-${sectionIndex}-item-${sectionItemIndex}`}
+                        >
+                          {getPrefix(section.listType)}
+                          {sectionItem}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
+
               {item.achievements && (
-                <ul className="timeline-achievements">
-                  {item.achievements.map((achievement, idx) => (
-                    <li key={idx}>✓ {achievement}</li>
-                  ))}
-                </ul>
+                <>
+                  <p className="timeline-section-title">Key Highlights:</p>
+                  <ul className="timeline-achievements">
+                    {item.achievements.map((achievement, idx) => (
+                      <li key={idx}>✓ {achievement}</li>
+                    ))}
+                  </ul>
+                </>
               )}
             </motion.div>
           </motion.div>

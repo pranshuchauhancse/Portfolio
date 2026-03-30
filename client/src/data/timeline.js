@@ -1,58 +1,53 @@
-export const timeline = [
+﻿export const timeline = [
   {
     id: 1,
-    title: "Full Stack Portfolio Development",
-    company: "Self-Initiated Projects",
-    duration: "2025 - Present",
-    startDate: "2024-01-15",
-    description: "Designing and shipping full-stack web apps with React, Express, and MongoDB, focusing on practical features and clean architecture.",
+    title: "Bachelor of Technology (B.Tech) - Computer Science & Engineering",
+    company: "GLA University, Mathura",
+    duration: "2023 - 2027 (Pursuing)",
+    startDate: "2023-08-01",
+    stream: "Computer Science & Engineering",
+    description:
+      "Currently pursuing my undergraduate degree in Computer Science, where I am building a strong foundation in programming, problem-solving, and software development. Along with academics, I actively focus on practical learning by working on projects and improving my technical skills.",
     achievements: [
-      "Built and deployed multiple real-world projects",
-      "Improved app structure with reusable component patterns",
-      "Implemented responsive UI and route-driven application architecture"
+      "Learning core subjects like Data Structures, Algorithms, and Database Management",
+      "Improving coding and problem-solving skills through regular practice",
+      "Applying concepts by building real-world projects",
+      "Exploring modern technologies and development practices"
     ],
-    icon: "🚀"
+    icon: "🎓"
   },
   {
     id: 2,
-    title: "Backend and API Development",
-    company: "Academic and Personal Projects",
-    duration: "2024 - 2025",
-    startDate: "2022-06-01",
-    description: "Built REST APIs, authentication flows, and data models to support project features end-to-end.",
+    title: "Class 12 (Senior Secondary)",
+    company: "Army Public School, Fatehgarh",
+    duration: "2022 - 2023",
+    startDate: "2022-04-01",
+    stream: "PCM with Computer Science",
+    description:
+      "Completed my senior secondary education with a focus on science and computer studies. During this time, I started understanding how technology works and developed an interest in programming and logical thinking.",
     achievements: [
-      "Created secure and modular API endpoints",
-      "Connected frontend state with backend business logic",
-      "Practiced error handling and data validation patterns"
+      "Studied core subjects including Physics, Chemistry, Mathematics, and Computer Science",
+      "Built a strong base in analytical and problem-solving skills",
+      "Gained early exposure to programming concepts",
+      "Developed interest in the field of technology and software"
     ],
-    icon: "💻"
+    icon: "🎓"
   },
   {
     id: 3,
-    title: "Frontend Foundations",
-    company: "Learning Phase",
-    duration: "2023 - 2024",
-    startDate: "2021-03-10",
-    description: "Built strong fundamentals in HTML, CSS, JavaScript, and React through continuous hands-on practice.",
+    title: "Class 10 (Secondary Education)",
+    company: "Army Public School, Fatehgarh",
+    duration: "2020 - 2021",
+    startDate: "2020-04-01",
+    stream: "Science",
+    description:
+      "Completed my secondary education with a focus on building strong academic fundamentals. This phase helped me develop discipline, consistency, and curiosity towards science and learning.",
     achievements: [
-      "Developed responsive multi-page websites",
-      "Learned component-driven development",
-      "Built first complete full-stack mini project"
+      "Built a solid foundation in science and mathematics",
+      "Developed consistent study habits and discipline",
+      "Improved logical thinking and understanding of basic concepts",
+      "Sparked initial interest in technology and problem-solving"
     ],
-    icon: "🌱"
-  },
-  {
-    id: 4,
-    title: "Computer Science Growth Track",
-    company: "Academic Journey",
-    duration: "2022 - 2023",
-    startDate: "2020-09-01",
-    description: "Studied core programming concepts, DSA, and software engineering basics while applying them in practical exercises.",
-    achievements: [
-      "Strengthened problem-solving with DSA practice",
-      "Applied OOP concepts in Java and Python",
-      "Created a consistent project-building habit"
-    ],
-    icon: "🎓"
+    icon: "📘"
   }
 ];
