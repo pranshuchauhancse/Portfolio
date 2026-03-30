@@ -1,50 +1,57 @@
-export const coCurricularActivities = [
+﻿export const coCurricularActivities = [
   {
     id: 1,
-    title: "Tech Community Coordinator",
-    organization: "Campus Developer Circle",
-    duration: "2024 - Present",
-    description: "Coordinated peer learning sessions focused on web fundamentals, project planning, and coding best practices.",
-    icon: "👥"
+    title: "Guinness World Record Participation",
+    organization: "Lung Care Foundation (Army Public School, Shankar Vihar)",
+    duration: "December 2017",
+    featured: true,
+    description:
+      "Participated in the Guinness World Record event for the World's Largest Human Lung Formation held at Thyagraj Stadium, Delhi on 22 December 2017.",
+    icon: "🏅"
   },
   {
     id: 2,
-    title: "Hackathon Builder",
-    organization: "College and Open Hackathons",
-    duration: "2024",
-    description: "Built rapid prototypes in time-bound environments and improved teamwork, debugging speed, and feature prioritization.",
-    icon: "🚀"
+    title: "Volunteer - Treasure Hunt Event",
+    organization: "Literario Club, GLA University",
+    duration: "October 2024",
+    description:
+      "Volunteered in the Treasure Hunt event organized by the Literario Club at GLA University and supported event execution and participant coordination.",
+    icon: "🗺️"
   },
   {
     id: 3,
-    title: "Open Source Contributor",
-    organization: "GitHub Ecosystem",
-    duration: "2023 - Present",
-    description: "Contributed fixes and improvements to public repositories while learning collaborative workflows and review etiquette.",
-    icon: "🤝"
+    title: "Coordinator - Srijan (Cultural Fest)",
+    organization: "GLA University",
+    duration: "November 2024, November 2025",
+    description:
+      "Served as a coordinator for Srijan, contributing to event planning, team coordination, and smooth on-ground management.",
+    icon: "🎪"
   },
   {
     id: 4,
-    title: "Technical Content Writer",
-    organization: "Personal Notes and Community Posts",
-    duration: "2024 - Present",
-    description: "Created learning notes and explainers on JavaScript, React, and debugging patterns to help beginner developers.",
-    icon: "📹"
+    title: "Volunteer - Spandan (Annual Fest)",
+    organization: "GLA University",
+    duration: "April 2024, January 2025",
+    description:
+      "Volunteered in Spandan annual fest and assisted with event logistics, participation flow, and overall activity support.",
+    icon: "🎊"
   },
   {
     id: 5,
-    title: "Volunteer Developer",
-    organization: "Community Initiatives",
-    duration: "2023 - 2024",
-    description: "Helped small local groups with simple websites and forms to improve their online communication.",
-    icon: "❤️"
+    title: "TEDx Structured Speaking Workshop",
+    organization: "Workshop by Monisha Doley",
+    duration: "Attended",
+    description:
+      "Attended a TEDx workshop on Structured Speaking to improve communication, presentation flow, and public speaking structure.",
+    icon: "🗣️"
   },
   {
     id: 6,
-    title: "Peer Mentoring",
-    organization: "Student Developer Network",
-    duration: "2024 - Present",
-    description: "Supported juniors in understanding project structure, Git workflows, and frontend fundamentals.",
-    icon: "🎓"
+    title: "Participant - 36 hrs AI-Nirman Hackathon",
+    organization: "GLA University",
+    duration: "36 Hours",
+    description:
+      "Participated in the 36-hour AI-Nirman Hackathon, collaborating in a fast-paced environment to build and present an AI-focused solution.",
+    icon: "🤝"
   }
 ];

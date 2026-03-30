@@ -34,12 +34,15 @@ function CoCurricular({ activities }) {
         {activities.map((activity) => (
           <motion.div
             key={activity.id}
-            className="activity-card"
+            className={`activity-card${activity.featured ? " activity-card-featured" : ""}`}
             variants={itemVariants}
             whileHover={{ scale: 1.02, x: 10 }}
           >
             <div className="activity-icon">{activity.icon}</div>
             <div className="activity-content">
+              {activity.featured && (
+                <span className="activity-badge">Lifetime Achievement</span>
+              )}
               <h3 className="activity-title">{activity.title}</h3>
               <p className="activity-org">{activity.organization}</p>
               <p className="activity-duration">{activity.duration}</p>

@@ -1356,6 +1356,22 @@ p {
   transform: translateX(8px);
 }
 
+.activity-card-featured {
+  position: relative;
+  border-color: color-mix(in srgb, #f6c453 70%, var(--border));
+  background: linear-gradient(
+    180deg,
+    color-mix(in srgb, rgba(246, 196, 83, 0.16) 45%, var(--surface)) 0%,
+    color-mix(in srgb, rgba(246, 196, 83, 0.06) 38%, var(--surface-soft)) 100%
+  );
+  box-shadow: 0 0 0 1px rgba(246, 196, 83, 0.22), 0 16px 42px rgba(0, 0, 0, 0.4);
+}
+
+.activity-card-featured:hover {
+  border-color: color-mix(in srgb, #f6c453 85%, var(--brand));
+  box-shadow: 0 0 0 6px rgba(246, 196, 83, 0.15), 0 16px 42px rgba(0, 0, 0, 0.4);
+}
+
 .activity-icon {
   font-size: 2.5rem;
   flex-shrink: 0;
@@ -1370,6 +1386,20 @@ p {
 
 .activity-content {
   flex: 1;
+}
+
+.activity-badge {
+  display: inline-flex;
+  margin: 0 0 0.55rem;
+  padding: 0.22rem 0.62rem;
+  border-radius: 999px;
+  border: 1px solid rgba(246, 196, 83, 0.58);
+  background: rgba(246, 196, 83, 0.16);
+  color: #ffd978;
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
 }
 
 .activity-title {
