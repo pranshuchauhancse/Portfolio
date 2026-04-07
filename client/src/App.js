@@ -4,10 +4,6 @@ import Footer from "./components/Footer";
 import LoadingSkeleton from "./components/LoadingSkeleton";
 import { matchPath, usePathname } from "./router";
 import { motion } from "framer-motion";
-import {
-  ONE_PAGE_ROUTE_TO_SECTION_ID,
-  ONE_PAGE_SECTION_ORDER,
-} from "./config/sections";
 
 const HomePage = lazy(() => import("./pages/HomePage"));
 const AboutPage = lazy(() => import("./pages/AboutPage"));
@@ -24,52 +20,19 @@ const CaseStudiesPage = lazy(() => import("./pages/CaseStudiesPage"));
 const CaseStudyDetailPage = lazy(() => import("./pages/CaseStudyDetailPage"));
 const NotFoundPage = lazy(() => import("./pages/NotFoundPage"));
 
-const sectionComponents = {
-  about: AboutPage,
-  skills: SkillsPage,
-  projects: ProjectsPage,
-  resume: ResumePage,
-  timeline: TimelinePage,
-  certifications: CertificationsPage,
-  cocurricular: CoCurricularPage,
-  testimonials: TestimonialsPage,
-  "case-studies": CaseStudiesPage,
-  contact: ContactPage,
+const routeComponents = {
+  "/": HomePage,
+  "/about": AboutPage,
+  "/skills": SkillsPage,
+  "/projects": ProjectsPage,
+  "/resume": ResumePage,
+  "/timeline": TimelinePage,
+  "/certifications": CertificationsPage,
+  "/cocurricular": CoCurricularPage,
+  "/testimonials": TestimonialsPage,
+  "/case-studies": CaseStudiesPage,
+  "/contact": ContactPage,
 };
-
-function OnePagePortfolio({ pathname }) {
-  useEffect(() => {
-    const hash = window.location.hash?.replace("#", "").trim();
-    const mappedSectionId = ONE_PAGE_ROUTE_TO_SECTION_ID[pathname];
-    const targetId = hash || mappedSectionId;
-
-    if (!targetId) return;
-
-    const target = document.getElementById(targetId);
-    if (!target) return;
-
-    // Wait one frame to ensure lazy section content is mounted before scrolling.
-    window.requestAnimationFrame(() => {
-      target.scrollIntoView({ behavior: "smooth", block: "start" });
-    });
-  }, [pathname]);
-
-  return (
-    <>
-      <HomePage />
-      {ONE_PAGE_SECTION_ORDER.map((sectionId) => {
-        const SectionComponent = sectionComponents[sectionId];
-        if (!SectionComponent) return null;
-
-        return (
-          <div key={sectionId} id={sectionId} className="scroll-section">
-            <SectionComponent />
-          </div>
-        );
-      })}
-    </>
-  );
-}
 
 function resolveView(pathname) {
   const projectMatch = matchPath("/projects/:slug", pathname);
@@ -85,8 +48,9 @@ function resolveView(pathname) {
     return { title: "Case Study", render: <CaseStudyDetailPage /> };
   }
 
-  if (pathname in ONE_PAGE_ROUTE_TO_SECTION_ID) {
-    return { title: "Home", render: <OnePagePortfolio pathname={pathname} /> };
+  const PageComponent = routeComponents[pathname];
+  if (PageComponent) {
+    return { title: "Portfolio", render: <PageComponent /> };
   }
 
   return { title: "Not Found", render: <NotFoundPage /> };
