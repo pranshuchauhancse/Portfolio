@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useEffect, useState } from "react";
 
 const DEFAULT_PATHNAME = "/";
 
@@ -66,7 +66,7 @@ export function usePathname() {
 
 export function Link({ to, onClick, children, ...props }) {
   const href = typeof to === "string" ? to : DEFAULT_PATHNAME;
-  const isExternal = href.startsWith("http") || href.startsWith("mailto:");
+  const isExternal = href.startsWith("http") || href.startsWith("mailto:") || href.startsWith("#");
 
   return (
     <a
@@ -87,28 +87,4 @@ export function Link({ to, onClick, children, ...props }) {
       {children}
     </a>
   );
-}
-
-export function RouteView({ pathname, routes }) {
-  const resolved = useMemo(() => {
-    for (const route of routes) {
-      const match = matchPath(route.path, pathname);
-      if (!match) continue;
-      return { route, params: match.params };
-    }
-    return null;
-  }, [pathname, routes]);
-
-  useEffect(() => {
-    const title = resolved?.route?.title;
-    if (title) document.title = `${title} • Pranshu Chauhan Portfolio`;
-  }, [resolved]);
-
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [pathname]);
-
-  if (!resolved) return null;
-  const Component = resolved.route.component;
-  return <Component params={resolved.params} />;
 }

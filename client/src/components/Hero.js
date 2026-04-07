@@ -49,10 +49,10 @@ function Hero() {
               </p>
 
               <motion.div className="hero-buttons" {...buttonsMotionProps}>
-                <Link className="btn btn-ghost" to="/about">
+                <Link className="btn btn-ghost" to="#about">
                   About Me
                 </Link>
-                <Link className="btn btn-primary" to="/projects">
+                <Link className="btn btn-primary" to="#projects">
                   View My Work
                 </Link>
               </motion.div>
