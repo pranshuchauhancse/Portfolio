@@ -69,7 +69,7 @@ function ProjectsPage() {
 
       <div className="projects-grid-wide">
         {filtered.map((project, index) => {
-          const liveUrl = project.links.demo && project.links.demo !== "#" ? project.links.demo : project.links.github;
+          const hasLiveDemo = Boolean(project.links.demo && project.links.demo.trim());
 
           return (
             <motion.article
@@ -95,9 +95,11 @@ function ProjectsPage() {
                 <a href={project.links.github} target="_blank" rel="noreferrer">
                   GitHub
                 </a>
-                <a href={liveUrl} target="_blank" rel="noreferrer">
-                  Live Demo
-                </a>
+                {hasLiveDemo && (
+                  <a href={project.links.demo} target="_blank" rel="noreferrer">
+                    Live Demo
+                  </a>
+                )}
               </div>
             </motion.article>
           );

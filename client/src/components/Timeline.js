@@ -39,7 +39,7 @@ function Timeline({ items }) {
             className="timeline-item"
             variants={itemVariants}
           >
-            <div className="timeline-marker">
+            <div className={`timeline-marker ${item.type || "edu"}`}>
               <div className="timeline-icon">{item.icon}</div>
             </div>
             <motion.div

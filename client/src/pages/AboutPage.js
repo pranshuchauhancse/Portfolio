@@ -21,12 +21,11 @@ function AboutPage() {
       </motion.h2>
       <motion.div {...contentMotionProps}>
         <p>
-          I am a software engineer who enjoys building dependable web products from end to end.
-          I like taking a feature from idea to release, from planning the data model to polishing the final user flow.
+          I'm a 2nd-year CS student at GLA University, Mathura (batch 2027) who loves taking ideas from concept to deployed product.
+          My core stack is React, Node.js, Express, and MongoDB.
         </p>
 
         <p>
-          My core stack is React, Node.js, Express, and MongoDB.
           I care about readable code, maintainable structure, and interfaces that are simple for users but robust under real usage.
         </p>
 

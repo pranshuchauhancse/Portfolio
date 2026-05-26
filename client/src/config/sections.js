@@ -1,14 +1,16 @@
 export const NAVIGATION_ITEMS = [
   { label: "About", href: "/about" },
-  { label: "Skills", href: "/skills" },
   { label: "Projects", href: "/projects" },
   { label: "Resume", href: "/resume" },
   { label: "Timeline", href: "/timeline" },
+  { label: "Contact", href: "/contact" },
+];
+
+export const MORE_NAVIGATION_ITEMS = [
   { label: "Certifications", href: "/certifications" },
   { label: "Co-Curricular", href: "/cocurricular" },
   { label: "Testimonials", href: "/testimonials" },
   { label: "Case Studies", href: "/case-studies" },
-  { label: "Contact", href: "/contact" },
 ];
 
 export const HOME_EXPLORE_CARDS = [

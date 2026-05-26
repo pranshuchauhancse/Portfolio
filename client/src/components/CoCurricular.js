@@ -41,7 +41,7 @@ function CoCurricular({ activities }) {
             <div className="activity-icon">{activity.icon}</div>
             <div className="activity-content">
               {activity.featured && (
-                <span className="activity-badge">Lifetime Achievement</span>
+                <span className="activity-badge">Featured</span>
               )}
               <h3 className="activity-title">{activity.title}</h3>
               <p className="activity-org">{activity.organization}</p>

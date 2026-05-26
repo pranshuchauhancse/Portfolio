@@ -34,6 +34,20 @@ const routeComponents = {
   "/contact": ContactPage,
 };
 
+const routeTitles = {
+  "/": "Portfolio",
+  "/about": "About",
+  "/skills": "Skills",
+  "/projects": "Projects",
+  "/resume": "Resume",
+  "/timeline": "Timeline",
+  "/certifications": "Certifications",
+  "/cocurricular": "Co-Curricular",
+  "/testimonials": "Testimonials",
+  "/case-studies": "Case Studies",
+  "/contact": "Contact",
+};
+
 function resolveView(pathname) {
   const projectMatch = matchPath("/projects/:slug", pathname);
   if (projectMatch) {
@@ -45,12 +59,15 @@ function resolveView(pathname) {
 
   const caseStudyMatch = matchPath("/case-studies/:slug", pathname);
   if (caseStudyMatch) {
-    return { title: "Case Study", render: <CaseStudyDetailPage /> };
+    return {
+      title: "Case Study",
+      render: <CaseStudyDetailPage params={caseStudyMatch.params} />,
+    };
   }
 
   const PageComponent = routeComponents[pathname];
   if (PageComponent) {
-    return { title: "Portfolio", render: <PageComponent /> };
+    return { title: routeTitles[pathname] || "Portfolio", render: <PageComponent /> };
   }
 
   return { title: "Not Found", render: <NotFoundPage /> };
@@ -61,8 +78,8 @@ function App() {
   const view = resolveView(pathname);
 
   useEffect(() => {
-    document.title = `${view.title} - Pranshu Chauhan Portfolio`;
-  }, [view.title]);
+    document.title = pathname === "/" ? "Pranshu Chauhan — Portfolio" : `${view.title} — Pranshu Chauhan`;
+  }, [pathname, view.title]);
 
   return (
     <div className="app">

@@ -34,7 +34,10 @@ function Hero() {
         <div className="hero-card" role="banner" aria-label="Intro">
           <div className="hero-grid">
             <div className="hero-copy">
-              <p className="hero-status">Open to internships, freelance projects, and collaborations</p>
+              <p className="hero-status">
+                <span className="hero-status-dot" aria-hidden="true" />
+                Open to Internships & Collaborations
+              </p>
 
               <motion.p className="hero-kicker" {...kickerMotionProps}>
                 Hello, I am <span className="hero-kicker-strong">Pranshu Chauhan</span>
@@ -44,15 +47,14 @@ function Hero() {
                 <span className="hero-highlight"><span>Software Engineer and Full Stack Developer</span></span>
               </motion.p>
               <p>
-                I design and build practical digital products with React, Node.js, and MongoDB.
-                My focus is simple: fast interfaces, clean architecture, and features that solve real user problems.
+                I'm a 2nd-year CS student at GLA University, Mathura (batch 2027), building modern MERN stack applications from concept to deployment.
               </p>
 
               <motion.div className="hero-buttons" {...buttonsMotionProps}>
-                <Link className="btn btn-ghost" to="#about">
+                <Link className="btn btn-ghost" to="/about">
                   About Me
                 </Link>
-                <Link className="btn btn-primary" to="#projects">
+                <Link className="btn btn-primary" to="/projects">
                   View My Work
                 </Link>
               </motion.div>
@@ -65,7 +67,7 @@ function Hero() {
             </div>
 
             <motion.div className="hero-media" tabIndex={0} {...mediaMotionProps}>
-              <img className="hero-portrait" src={portrait} alt="Portrait" />
+              <img className="hero-portrait" src={portrait} alt="Pranshu Chauhan - Software Engineer" loading="lazy" />
               <div className="hero-media-scrim" aria-hidden="true" />
               <div className="hero-media-caption" aria-label="Profile details">
                 <h4>Pranshu Chauhan</h4>

@@ -3,9 +3,9 @@ import { motion } from "framer-motion";
 import { Link, usePathname, matchPath } from "../router";
 import { getCaseStudyBySlug } from "../data/caseStudies";
 
-function CaseStudyDetailPage() {
+function CaseStudyDetailPage({ params }) {
   const pathname = usePathname();
-  const match = matchPath("/case-studies/:slug", pathname);
+  const match = params?.slug ? { params } : matchPath("/case-studies/:slug", pathname);
   const study = getCaseStudyBySlug(match?.params?.slug || "");
 
   if (!study) {

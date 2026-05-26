@@ -1,10 +1,12 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { projects } from "../data/projects";
+import { certifications } from "../data/certifications";
 
 const stats = [
-  { value: "5+", label: "Projects" },
+  { value: `${projects.length}+`, label: "Projects" },
   { value: "100+", label: "Commits" },
-  { value: "10+", label: "Certificates" }
+  { value: `${certifications.length}`, label: "Certificates" }
 ];
 
 function Stats() {

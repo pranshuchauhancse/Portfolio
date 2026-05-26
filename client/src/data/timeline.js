@@ -1,6 +1,7 @@
 ﻿export const timeline = [
   {
     id: 1,
+    type: "edu",
     title: "Bachelor of Technology (B.Tech) - Computer Science & Engineering",
     company: "GLA University, Mathura",
     duration: "2023 - 2027 (Pursuing)",
@@ -17,7 +18,72 @@
     icon: "🎓"
   },
   {
+    id: 4,
+    type: "project",
+    title: "Launched Nyay-AI",
+    company: "Academic Innovation Project",
+    duration: "2025",
+    startDate: "2025-02-01",
+    description:
+      "Built Nyay-AI, an AI legal assistance platform designed to make legal guidance more accessible through natural language interaction.",
+    achievements: [
+      "Designed a clean user flow for legal queries",
+      "Implemented AI-assisted guidance powered by NLP",
+      "Delivered a project demonstrating practical MERN and AI integration"
+    ],
+    icon: "🚀"
+  },
+  {
+    id: 5,
+    type: "cert",
+    title: "Full Stack Web Dev Certificate",
+    company: "GLA University & Coding Blocks",
+    duration: "2025",
+    startDate: "2025-05-01",
+    description:
+      "Completed a hands-on full stack development certificate course focused on web applications, APIs, and deployment workflows.",
+    achievements: [
+      "Built end-to-end web applications with modern JavaScript",
+      "Strengthened practical backend and database skills",
+      "Learned industry best practices for production-ready apps"
+    ],
+    icon: "💻"
+  },
+  {
+    id: 6,
+    type: "project",
+    title: "36-hr AI-Nirman Hackathon",
+    company: "GLA University",
+    duration: "2025",
+    startDate: "2025-09-01",
+    description:
+      "Participated in a 36-hour hackathon building an AI solution under tight deadlines, collaborating with teammates to deliver a working prototype.",
+    achievements: [
+      "Designed a concept quickly and iterated in a fast-paced setting",
+      "Coordinated development tasks across frontend and backend",
+      "Presented the final solution to faculty judges"
+    ],
+    icon: "🧠"
+  },
+  {
+    id: 7,
+    type: "project",
+    title: "Launched Cash Craft",
+    company: "Personal Product Build",
+    duration: "2024",
+    startDate: "2024-08-01",
+    description:
+      "Built Cash Craft, a personal finance management system for budgeting, expense tracking, and transaction visualization.",
+    achievements: [
+      "Delivered a complete MERN application with authentication",
+      "Designed a dashboard for daily spending insights",
+      "Implemented secure CRUD operations for financial data"
+    ],
+    icon: "💡"
+  },
+  {
     id: 2,
+    type: "edu",
     title: "Class 12 (Senior Secondary)",
     company: "Army Public School, Fatehgarh",
     duration: "2022 - 2023",
@@ -35,6 +101,7 @@
   },
   {
     id: 3,
+    type: "edu",
     title: "Class 10 (Secondary Education)",
     company: "Army Public School, Fatehgarh",
     duration: "2020 - 2021",

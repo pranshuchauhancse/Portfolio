@@ -13,7 +13,7 @@ const headingMotionProps = {
 function ProjectDetailPage({ params }) {
   // Find the project using the slug from the URL: `/projects/:slug`.
   const project = getProjectBySlug(params.slug);
-  const liveUrl = project?.links?.demo && project.links.demo !== "#" ? project.links.demo : project?.links?.github;
+  const liveUrl = project?.links?.demo?.trim() ? project.links.demo : null;
   if (!project) {
     return (
       <section className="section section-shell">
@@ -62,9 +62,11 @@ function ProjectDetailPage({ params }) {
             <a href={project.links.github} target="_blank" rel="noreferrer">
               GitHub
             </a>
-            <a href={liveUrl} target="_blank" rel="noreferrer">
-              Live Demo
-            </a>
+            {liveUrl && (
+              <a href={liveUrl} target="_blank" rel="noreferrer">
+                Live Demo
+              </a>
+            )}
           </div>
         </article>
       </div>

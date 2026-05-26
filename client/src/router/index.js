@@ -10,7 +10,7 @@ function normalizePathname(pathname) {
 }
 
 function isExternalHref(href) {
-  return href.startsWith("http") || href.startsWith("mailto:") || href.startsWith("#");
+  return href.startsWith("http") || href.startsWith("mailto:");
 }
 
 export function matchPath(pattern, pathname) {
@@ -66,7 +66,7 @@ export function usePathname() {
 
 export function Link({ to, onClick, children, ...props }) {
   const href = typeof to === "string" ? to : DEFAULT_PATHNAME;
-  const isExternal = href.startsWith("http") || href.startsWith("mailto:") || href.startsWith("#");
+  const isExternal = isExternalHref(href);
 
   return (
     <a

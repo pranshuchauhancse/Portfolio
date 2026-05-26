@@ -6,7 +6,7 @@ export const projects = [
     tags: ["MongoDB", "Express.js", "React.js", "Node.js", "JavaScript"],
     links: {
       github: "https://github.com/pranshuchauhancse/Cash-Craft-The-Smart-Budget-System",
-      demo: "https://github.com/pranshuchauhancse/Cash-Craft-The-Smart-Budget-System"
+      demo: ""
     },
     highlights: [
       "Built budgeting + expense tracking flows",
@@ -22,7 +22,7 @@ export const projects = [
     tags: ["Python", "NLP", "OpenAI API"],
     links: {
       github: "https://github.com/pranshuchauhancse/Nyay-AI-AI-Legal-Assistance-System",
-      demo: "https://github.com/pranshuchauhancse/Nyay-AI-AI-Legal-Assistance-System"
+      demo: ""
     },
     highlights: [
       "Guidance via natural language queries",
