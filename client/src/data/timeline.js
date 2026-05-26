@@ -1,85 +1,21 @@
 ﻿export const timeline = [
   {
-    id: 1,
+    id: 3,
     type: "edu",
-    title: "Bachelor of Technology (B.Tech) - Computer Science & Engineering",
-    company: "GLA University, Mathura",
-    duration: "2023 - 2027 (Pursuing)",
-    startDate: "2023-08-01",
-    stream: "Computer Science & Engineering",
+    title: "Class 10 (Secondary Education)",
+    company: "Army Public School, Fatehgarh",
+    duration: "2020 - 2021",
+    startDate: "2020-04-01",
+    stream: "Science",
     description:
-      "Currently pursuing my undergraduate degree in Computer Science, where I am building a strong foundation in programming, problem-solving, and software development. Along with academics, I actively focus on practical learning by working on projects and improving my technical skills.",
+      "Completed my secondary education with a focus on building strong academic fundamentals. This phase helped me develop discipline, consistency, and curiosity in learning.",
     achievements: [
-      "Learning core subjects like Data Structures, Algorithms, and Database Management",
-      "Improving coding and problem-solving skills through regular practice",
-      "Applying concepts by building real-world projects",
-      "Exploring modern technologies and development practices"
+      "Built a solid foundation in science and mathematics",
+      "Developed consistent study habits and discipline",
+      "Improved logical thinking and problem-solving abilities",
+      "Grew an early interest in technology and software"
     ],
-    icon: "🎓"
-  },
-  {
-    id: 4,
-    type: "project",
-    title: "Launched Nyay-AI",
-    company: "Academic Innovation Project",
-    duration: "2025",
-    startDate: "2025-02-01",
-    description:
-      "Built Nyay-AI, an AI legal assistance platform designed to make legal guidance more accessible through natural language interaction.",
-    achievements: [
-      "Designed a clean user flow for legal queries",
-      "Implemented AI-assisted guidance powered by NLP",
-      "Delivered a project demonstrating practical MERN and AI integration"
-    ],
-    icon: "🚀"
-  },
-  {
-    id: 5,
-    type: "cert",
-    title: "Full Stack Web Dev Certificate",
-    company: "GLA University & Coding Blocks",
-    duration: "2025",
-    startDate: "2025-05-01",
-    description:
-      "Completed a hands-on full stack development certificate course focused on web applications, APIs, and deployment workflows.",
-    achievements: [
-      "Built end-to-end web applications with modern JavaScript",
-      "Strengthened practical backend and database skills",
-      "Learned industry best practices for production-ready apps"
-    ],
-    icon: "💻"
-  },
-  {
-    id: 6,
-    type: "project",
-    title: "36-hr AI-Nirman Hackathon",
-    company: "GLA University",
-    duration: "2025",
-    startDate: "2025-09-01",
-    description:
-      "Participated in a 36-hour hackathon building an AI solution under tight deadlines, collaborating with teammates to deliver a working prototype.",
-    achievements: [
-      "Designed a concept quickly and iterated in a fast-paced setting",
-      "Coordinated development tasks across frontend and backend",
-      "Presented the final solution to faculty judges"
-    ],
-    icon: "🧠"
-  },
-  {
-    id: 7,
-    type: "project",
-    title: "Launched Cash Craft",
-    company: "Personal Product Build",
-    duration: "2024",
-    startDate: "2024-08-01",
-    description:
-      "Built Cash Craft, a personal finance management system for budgeting, expense tracking, and transaction visualization.",
-    achievements: [
-      "Delivered a complete MERN application with authentication",
-      "Designed a dashboard for daily spending insights",
-      "Implemented secure CRUD operations for financial data"
-    ],
-    icon: "💡"
+    icon: "📘"
   },
   {
     id: 2,
@@ -90,31 +26,95 @@
     startDate: "2022-04-01",
     stream: "PCM with Computer Science",
     description:
-      "Completed my senior secondary education with a focus on science and computer studies. During this time, I started understanding how technology works and developed an interest in programming and logical thinking.",
+      "Finished senior secondary education with an emphasis on physics, chemistry, mathematics, and computer science, while strengthening analytical skills.",
     achievements: [
-      "Studied core subjects including Physics, Chemistry, Mathematics, and Computer Science",
-      "Built a strong base in analytical and problem-solving skills",
-      "Gained early exposure to programming concepts",
-      "Developed interest in the field of technology and software"
+      "Developed strong problem-solving and analytical skills",
+      "Explored programming fundamentals and logic building",
+      "Balanced academic rigor with hands-on learning",
+      "Prepared for professional-level engineering coursework"
     ],
     icon: "🎓"
   },
   {
-    id: 3,
+    id: 1,
     type: "edu",
-    title: "Class 10 (Secondary Education)",
-    company: "Army Public School, Fatehgarh",
-    duration: "2020 - 2021",
-    startDate: "2020-04-01",
-    stream: "Science",
+    title: "Bachelor of Technology (B.Tech) - Computer Science & Engineering",
+    company: "GLA University, Mathura",
+    duration: "2023 - 2027 (Pursuing)",
+    startDate: "2023-08-01",
+    stream: "Computer Science & Engineering",
     description:
-      "Completed my secondary education with a focus on building strong academic fundamentals. This phase helped me develop discipline, consistency, and curiosity towards science and learning.",
+      "Currently pursuing a B.Tech degree while deepening my software engineering skills through full-stack projects and modern development practices.",
     achievements: [
-      "Built a solid foundation in science and mathematics",
-      "Developed consistent study habits and discipline",
-      "Improved logical thinking and understanding of basic concepts",
-      "Sparked initial interest in technology and problem-solving"
+      "Studying core topics in algorithms, data structures, and system design",
+      "Building portfolio projects with React, Node.js, and cloud-aware tooling",
+      "Strengthening collaborative and agile development habits",
+      "Exploring advanced CS subjects and practical software workflows"
     ],
-    icon: "📘"
+    icon: "🎓"
+  },
+  {
+    id: 7,
+    type: "project",
+    title: "Launched Cash Craft",
+    company: "Personal Product Build",
+    duration: "2024",
+    startDate: "2024-08-01",
+    description:
+      "Built Cash Craft, a personal finance management system for budgeting, expense tracking, and spending insights.",
+    achievements: [
+      "Delivered a complete MERN product with secure authentication",
+      "Built a responsive dashboard for everyday financial tracking",
+      "Implemented CRUD workflows and category-based summaries"
+    ],
+    icon: "💡"
+  },
+  {
+    id: 6,
+    type: "project",
+    title: "36-hr AI-Nirman Hackathon",
+    company: "GLA University",
+    duration: "2025",
+    startDate: "2025-02-01",
+    description:
+      "Participated in a 36-hour AI hackathon, building a practical prototype and collaborating under tight deadlines.",
+    achievements: [
+      "Designed and shipped a working AI solution quickly",
+      "Coordinated frontend and backend implementation across the team",
+      "Presented the final product to faculty judges"
+    ],
+    icon: "🧠"
+  },
+  {
+    id: 4,
+    type: "project",
+    title: "Launched Nyay-AI",
+    company: "Academic Innovation Project",
+    duration: "2025",
+    startDate: "2025-05-01",
+    description:
+      "Built Nyay-AI, an AI-assisted legal guidance platform that simplifies legal query exploration using natural language interactions.",
+    achievements: [
+      "Designed a user-first query flow for legal assistance",
+      "Integrated natural language handling with a custom backend",
+      "Delivered a polished demo for academic evaluation"
+    ],
+    icon: "🚀"
+  },
+  {
+    id: 5,
+    type: "cert",
+    title: "Full Stack Web Dev Certificate",
+    company: "GLA University & Coding Blocks",
+    duration: "2025",
+    startDate: "2025-06-01",
+    description:
+      "Completed an intensive full stack web development certification focused on application architecture, APIs, and deployment readiness.",
+    achievements: [
+      "Built end-to-end web applications with modern JavaScript",
+      "Strengthened practical backend and database skills",
+      "Learned industry best practices for production-ready apps"
+    ],
+    icon: "💻"
   }
 ];

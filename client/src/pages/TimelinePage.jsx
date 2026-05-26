@@ -18,8 +18,8 @@ function TimelinePage() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <h1>My Professional Journey</h1>
-          <p>Experience and career progression timeline</p>
+          <h1>Timeline of Growth</h1>
+          <p>Progression across education, product builds, and certifications.</p>
         </motion.div>
 
         <Timeline items={timeline} />
