@@ -1,9 +1,8 @@
 import React, { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
-import { FaBars, FaGithub, FaMoon, FaSun, FaTimes } from "react-icons/fa";
+import { FaBars, FaGithub, FaTimes } from "react-icons/fa";
 import { Link, usePathname } from "../router";
 import { NAVIGATION_ITEMS, MORE_NAVIGATION_ITEMS } from "../config/sections";
-import { useTheme } from "../context/ThemeContext";
 import { contact } from "../data/contact";
 
 function Navbar() {
@@ -11,7 +10,7 @@ function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isMoreOpen, setIsMoreOpen] = useState(false);
   const moreRef = useRef(null);
-  const { isDark, toggleTheme } = useTheme();
+  // Theme is forced to dark; toggle removed.
 
   useEffect(() => {
     setIsOpen(false);
@@ -93,9 +92,6 @@ function Navbar() {
         </li>
 
         <li className="nav-actions">
-          <button type="button" className="nav-icon-button" onClick={toggleTheme} aria-label="Toggle theme">
-            {isDark ? <FaSun /> : <FaMoon />}
-          </button>
           <a
             href={contact.github}
             target="_blank"
@@ -134,11 +130,7 @@ function Navbar() {
                 </Link>
               </li>
             ))}
-            <li className="drawer-actions-row">
-              <button type="button" className="nav-icon-button" onClick={toggleTheme}>
-                {isDark ? <FaSun /> : <FaMoon />} Theme
-              </button>
-            </li>
+            {/* Theme toggle removed; theme is forced to dark. */}
             <li className="drawer-actions-row">
               <a href={contact.github} target="_blank" rel="noopener noreferrer" className="nav-drawer-link">
                 <FaGithub /> GitHub

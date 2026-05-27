@@ -1,29 +1,16 @@
-import React, { createContext, useState, useEffect } from "react";
+import React, { createContext } from "react";
 
 export const ThemeContext = createContext();
 
 export function ThemeProvider({ children }) {
-  const [isDark, setIsDark] = useState(true);
-
-  useEffect(() => {
-    const savedTheme = localStorage.getItem("theme");
-    if (savedTheme) {
-      setIsDark(savedTheme === "dark");
-    }
+  // Force dark theme for the entire app. Toggle option removed per user request.
+  React.useEffect(() => {
+    document.documentElement.setAttribute("data-theme", "dark");
   }, []);
 
-  useEffect(() => {
-    localStorage.setItem("theme", isDark ? "dark" : "light");
-    document.documentElement.setAttribute("data-theme", isDark ? "dark" : "light");
-  }, [isDark]);
+  const value = { isDark: true, toggleTheme: () => {} };
 
-  const toggleTheme = () => setIsDark(!isDark);
-
-  return (
-    <ThemeContext.Provider value={{ isDark, toggleTheme }}>
-      {children}
-    </ThemeContext.Provider>
-  );
+  return <ThemeContext.Provider value={value}>{children}</ThemeContext.Provider>;
 }
 
 export function useTheme() {
