@@ -3,79 +3,53 @@ import { motion } from "framer-motion";
 import portrait from "../assets/portrait.jpg";
 import { Link } from "../router";
 
-const kickerMotionProps = {
-  initial: { opacity: 0, y: 16 },
-  animate: { opacity: 1, y: 0 },
-  transition: { duration: 0.55, ease: "easeOut" },
-};
-
-const taglineMotionProps = {
-  initial: { opacity: 0, y: 10 },
-  animate: { opacity: 1, y: 0 },
-  transition: { delay: 0.15, duration: 0.55, ease: "easeOut" },
-};
-
-const buttonsMotionProps = {
-  initial: { opacity: 0, y: 10 },
-  animate: { opacity: 1, y: 0 },
-  transition: { delay: 0.3, duration: 0.55, ease: "easeOut" },
-};
-
-const mediaMotionProps = {
-  initial: { opacity: 0, x: 20 },
-  animate: { opacity: 1, x: 0 },
-  transition: { delay: 0.2, duration: 0.65, ease: "easeOut" },
-};
-
 function Hero() {
   return (
-    <section id="home" className="hero">
+    <section id="home" className="hero hero-landing">
       <div className="section-shell hero-shell">
-        <div className="hero-card" role="banner" aria-label="Intro">
-          <div className="hero-grid">
-            <div className="hero-copy">
-              <p className="hero-status">
-                <span className="hero-status-dot" aria-hidden="true" />
-                Open to Internships & Collaborations
-              </p>
+        <div className="hero-grid">
+          <div className="hero-copy">
+            <p className="eyebrow">Pranshu Chauhan</p>
+            <h1>Building AI-powered and full-stack applications that solve real problems.</h1>
+            <p className="hero-summary">
+              I create polished products with modern interfaces, reliable backend systems, and AI-aware features designed for internships,
+              freelance engagements, and fast-moving teams.
+            </p>
 
-              <motion.p className="hero-kicker" {...kickerMotionProps}>
-                Hello, I am <span className="hero-kicker-strong">Pranshu Chauhan</span>
-              </motion.p>
-
-              <motion.p className="hero-tagline" {...taglineMotionProps}>
-                <span className="hero-highlight"><span>Software Engineer and Full Stack Developer</span></span>
-              </motion.p>
-              <p>
-                I'm a 2nd-year CS student at GLA University, Mathura (batch 2027), building modern MERN stack applications from concept to deployment.
-              </p>
-
-              <motion.div className="hero-buttons" {...buttonsMotionProps}>
-                <Link className="btn btn-ghost" to="/about">
-                  About Me
-                </Link>
-                <Link className="btn btn-primary" to="/projects">
-                  View My Work
-                </Link>
-              </motion.div>
-
-              <p>
-                <strong>
-                  Currently focused on modern frontend systems, API-first backends, and reliable deployment workflows.
-                </strong>
-              </p>
+            <div className="hero-actions">
+              <Link className="btn btn-primary" to="/projects">
+                View Projects
+              </Link>
+              <a className="btn btn-secondary" href="/resume.pdf" target="_blank" rel="noreferrer">
+                Download Resume
+              </a>
+              <Link className="btn btn-ghost" to="/contact">
+                Contact Me
+              </Link>
             </div>
 
-            <motion.div className="hero-media" tabIndex={0} {...mediaMotionProps}>
-              <img className="hero-portrait" src={portrait} alt="Pranshu Chauhan - Software Engineer" loading="lazy" />
-              <div className="hero-media-scrim" aria-hidden="true" />
-              <div className="hero-media-caption" aria-label="Profile details">
-                <h4>Pranshu Chauhan</h4>
-                <p>Student</p>
-                <p>GLA University</p>
+            <div className="hero-stat-blocks">
+              <div className="hero-stat">
+                <span className="hero-stat-value">AI & Product</span>
+                <span className="hero-stat-label">Hybrid engineering focus</span>
               </div>
-            </motion.div>
+              <div className="hero-stat">
+                <span className="hero-stat-value">Internship ready</span>
+                <span className="hero-stat-label">Reliable, reviewable build quality</span>
+              </div>
+              <div className="hero-stat">
+                <span className="hero-stat-value">Fast delivery</span>
+                <span className="hero-stat-label">From prototype to launch-ready</span>
+              </div>
+            </div>
           </div>
+
+          <motion.div className="hero-media" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
+            <div className="hero-media-frame">
+              <img className="hero-portrait" src={portrait} alt="Portrait of Pranshu Chauhan" loading="lazy" />
+              <div className="hero-badge">Open to internships, freelance work, and startup collaborations.</div>
+            </div>
+          </motion.div>
         </div>
       </div>
     </section>

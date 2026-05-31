@@ -7,44 +7,32 @@ import { motion } from "framer-motion";
 
 const HomePage = lazy(() => import("./pages/HomePage"));
 const AboutPage = lazy(() => import("./pages/AboutPage"));
-const SkillsPage = lazy(() => import("./pages/SkillsPage"));
 const ProjectsPage = lazy(() => import("./pages/ProjectsPage"));
 const ProjectDetailPage = lazy(() => import("./pages/ProjectDetailPage"));
 const ResumePage = lazy(() => import("./pages/ResumePage"));
-const ContactPage = lazy(() => import("./pages/ContactPage"));
 const CertificationsPage = lazy(() => import("./pages/CertificationsPage"));
-const CoCurricularPage = lazy(() => import("./pages/CoCurricularPage"));
-const TimelinePage = lazy(() => import("./pages/TimelinePage"));
-const TestimonialsPage = lazy(() => import("./pages/TestimonialsPage"));
-const CaseStudiesPage = lazy(() => import("./pages/CaseStudiesPage"));
-const CaseStudyDetailPage = lazy(() => import("./pages/CaseStudyDetailPage"));
+const BlogPage = lazy(() => import("./pages/BlogPage"));
+const BlogDetailPage = lazy(() => import("./pages/BlogDetailPage"));
+const ContactPage = lazy(() => import("./pages/ContactPage"));
 const NotFoundPage = lazy(() => import("./pages/NotFoundPage"));
 
 const routeComponents = {
   "/": HomePage,
   "/about": AboutPage,
-  "/skills": SkillsPage,
   "/projects": ProjectsPage,
   "/resume": ResumePage,
-  "/timeline": TimelinePage,
   "/certifications": CertificationsPage,
-  "/cocurricular": CoCurricularPage,
-  "/testimonials": TestimonialsPage,
-  "/case-studies": CaseStudiesPage,
+  "/blog": BlogPage,
   "/contact": ContactPage,
 };
 
 const routeTitles = {
   "/": "Portfolio",
   "/about": "About",
-  "/skills": "Skills",
   "/projects": "Projects",
   "/resume": "Resume",
-  "/timeline": "Timeline",
   "/certifications": "Certifications",
-  "/cocurricular": "Co-Curricular",
-  "/testimonials": "Testimonials",
-  "/case-studies": "Case Studies",
+  "/blog": "Blog",
   "/contact": "Contact",
 };
 
@@ -57,11 +45,11 @@ function resolveView(pathname) {
     };
   }
 
-  const caseStudyMatch = matchPath("/case-studies/:slug", pathname);
-  if (caseStudyMatch) {
+  const blogMatch = matchPath("/blog/:slug", pathname);
+  if (blogMatch) {
     return {
-      title: "Case Study",
-      render: <CaseStudyDetailPage params={caseStudyMatch.params} />,
+      title: "Blog",
+      render: <BlogDetailPage params={blogMatch.params} />,
     };
   }
 

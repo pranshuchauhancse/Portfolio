@@ -1,62 +1,66 @@
 import React from "react";
 import { motion } from "framer-motion";
-
-const headingMotionProps = {
-  initial: { opacity: 0, y: 14 },
-  animate: { opacity: 1, y: 0 },
-  transition: { duration: 0.45 },
-};
-
-const contentMotionProps = {
-  initial: { opacity: 0 },
-  animate: { opacity: 1 },
-  transition: { delay: 0.1, duration: 0.4 },
-};
+import Seo from "../components/Seo";
+import Timeline from "../components/Timeline";
+import { timeline } from "../data/timeline";
 
 function AboutPage() {
   return (
-    <section className="section section-shell">
-      <motion.h2 {...headingMotionProps}>
-        About Me
-      </motion.h2>
-      <motion.div {...contentMotionProps}>
-        <p>
-          I'm a 2nd-year CS student at GLA University, Mathura (batch 2027) who loves taking ideas from concept to deployed product.
-          My core stack is React, Node.js, Express, and MongoDB.
-        </p>
+    <section className="section section-shell about-page">
+      <Seo
+        title="About | Pranshu Chauhan"
+        description="Discover Pranshu Chauhan's engineering journey, what he builds, and the goals that drive his work in full-stack and AI-enabled products."
+      />
 
-        <p>
-          I care about readable code, maintainable structure, and interfaces that are simple for users but robust under real usage.
-        </p>
+      <div className="page-header">
+        <p className="eyebrow">About</p>
+        <h2>A modern engineer building products with clarity, speed, and technical depth.</h2>
+        <p className="lead">My career is defined by software that is easy to use, reliable to maintain, and strong enough to support early-stage product decisions.</p>
+      </div>
 
-        <p>
-          Beyond coding, I invest time in continuous learning, open-source contribution, and peer collaboration.
-          Each project helps me sharpen both technical depth and communication.
-        </p>
+      <div className="about-grid">
+        <article className="card about-card">
+          <h3>How I started</h3>
+          <p>
+            I began by building projects for friends and school clubs, then moved into full-stack work that combined user-facing interfaces with backend systems.
+            That early curiosity has grown into a focus on engineering work that recruiters recognize as product-ready and execution-focused.
+          </p>
+        </article>
 
-        <p>
-          If you are looking for someone who combines execution speed with thoughtful engineering decisions,
-          I would love to connect and build something valuable together.
-        </p>
-      </motion.div>
-      <div className="page-split">
-        <article className="card">
-          <h3>What I Build</h3>
+        <article className="card about-card">
+          <h3>Why I build</h3>
+          <p>
+            I build software to make complex workflows feel intuitive. I enjoy taking the noise out of technical problems and shipping reliable solutions that people can trust.
+          </p>
+        </article>
+
+        <article className="card about-card">
+          <h3>What excites me</h3>
           <ul className="bullets">
-            <li>Responsive frontend applications with React</li>
-            <li>REST APIs and backend services with Node.js</li>
-            <li>Portfolio, dashboard, and productivity web apps</li>
+            <li>AI-powered interfaces that reduce friction and improve decision-making.</li>
+            <li>Full-stack products with clear user journeys and clean operational behavior.</li>
+            <li>Engineering systems that are easy to maintain, extend, and ship quickly.</li>
           </ul>
         </article>
-        <article className="card">
-          <h3>How I Work</h3>
+
+        <article className="card about-card">
+          <h3>Career goals</h3>
           <ul className="bullets">
-            <li>Clear communication and milestone-based delivery</li>
-            <li>Readable code with practical documentation</li>
-            <li>Performance, accessibility, and maintainability in focus</li>
+            <li>Join teams where I can deliver internship and freelance projects with strong product outcomes.</li>
+            <li>Work on AI-integrated applications that feel polished and practical.</li>
+            <li>Build professional full-stack systems that scale from MVP to production-ready.</li>
           </ul>
         </article>
       </div>
+
+      <section className="timeline-section">
+        <div className="section-intro">
+          <p className="eyebrow">Growth timeline</p>
+          <h2>Career milestones and technical progress.</h2>
+          <p className="lead">A concise view of the work, education, and product builds that shape my portfolio today.</p>
+        </div>
+        <Timeline items={timeline} />
+      </section>
     </section>
   );
 }

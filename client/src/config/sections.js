@@ -1,42 +1,24 @@
 export const NAVIGATION_ITEMS = [
+  { label: "Home", href: "/" },
   { label: "About", href: "/about" },
   { label: "Projects", href: "/projects" },
+  { label: "Certifications", href: "/certifications" },
   { label: "Resume", href: "/resume" },
-  { label: "Timeline", href: "/timeline" },
+  { label: "Blog", href: "/blog" },
   { label: "Contact", href: "/contact" },
 ];
 
-export const MORE_NAVIGATION_ITEMS = [
-  { label: "Certifications", href: "/certifications" },
-  { label: "Co-Curricular", href: "/cocurricular" },
-  { label: "Testimonials", href: "/testimonials" },
-  { label: "Case Studies", href: "/case-studies" },
-];
-
-export const HOME_EXPLORE_CARDS = [
+export const HOME_FOCUS_AREAS = [
   {
-    title: "About",
-    desc: "Get a quick overview of my background, work style, and strengths.",
-    to: "/about",
+    title: "Product-focused delivery",
+    desc: "I build product-ready applications with clear business value, polished interaction, and reliable architecture.",
   },
   {
-    title: "Projects",
-    desc: "Browse shipped projects with tech stack, details, and outcomes.",
-    to: "/projects",
+    title: "Modern full-stack systems",
+    desc: "My work blends frontend clarity, backend stability, and data-aware decision making for strong technical outcomes.",
   },
   {
-    title: "Case Studies",
-    desc: "See how I approach problems from discovery to delivery.",
-    to: "/case-studies",
-  },
-  {
-    title: "Timeline",
-    desc: "Follow my growth path through learning, building, and collaboration.",
-    to: "/timeline",
-  },
-  {
-    title: "Contact",
-    desc: "Reach out for internships, freelance work, or collaboration.",
-    to: "/contact",
+    title: "AI-enabled tooling",
+    desc: "I apply generative AI, natural language workflows, and automation to make better digital experiences possible.",
   },
 ];

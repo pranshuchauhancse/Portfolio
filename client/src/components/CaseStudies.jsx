@@ -14,83 +14,80 @@ const containerVariants = {
 };
 
 const itemVariants = {
-  hidden: { opacity: 0, y: 20 },
+  hidden: { opacity: 0, y: 24 },
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.5 },
+    transition: { duration: 0.45 },
   },
 };
 
 function CaseStudies({ studies }) {
   return (
-    <motion.div
+    <motion.section
       className="case-studies-container"
       variants={containerVariants}
       initial="hidden"
       animate="visible"
+      aria-labelledby="case-studies-heading"
     >
-      <h2 className="section-title">Case Studies</h2>
+      <h2 id="case-studies-heading" className="section-title">
+        Featured case studies
+      </h2>
       <div className="case-studies-list">
         {studies.map((study, index) => (
-          <motion.div
+          <motion.article
             key={study.id}
             className={`case-study-item ${index % 2 === 1 ? "reverse" : ""}`}
             variants={itemVariants}
           >
-            <div className="study-image">{study.image}</div>
-            <div className="study-content">
-              <h3 className="study-title">{study.title}</h3>
-              <p className="study-client">
-                <strong>Client:</strong> {study.client}
-              </p>
-              <p className="study-duration">
-                <strong>Duration:</strong> {study.duration}
-              </p>
-              
-              <div className="study-section">
-                <h4>Challenge</h4>
-                <p>{study.problem}</p>
+            <div className="study-summary">
+              <div className="study-icon" aria-hidden="true">{study.image}</div>
+              <div>
+                <p className="study-category">{study.category}</p>
+                <h3>{study.title}</h3>
               </div>
-
-              <div className="study-section">
-                <h4>Solution</h4>
-                <p>{study.solution}</p>
-              </div>
-
-              <div className="study-results">
-                <h4>Results</h4>
-                <div className="results-grid">
-                  {Object.entries(study.results).map(([key, value]) => (
-                    <div key={key} className="result-item">
-                      <span className="result-value">{value}</span>
-                      <span className="result-label">
-                        {key.replace(/([A-Z])/g, " $1").toLowerCase()}
-                      </span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              <div className="study-tech">
-                <h4>Technologies</h4>
-                <div className="tech-tags">
-                  {study.technologies.map((tech) => (
-                    <span key={tech} className="tech-tag">
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-              </div>
-
-              <Link to={`/case-studies/${study.slug}`} className="study-link">
-                View Full Case Study →
-              </Link>
             </div>
-          </motion.div>
+
+            <div className="study-meta">
+              <span>{study.client}</span>
+              <span>{study.duration}</span>
+            </div>
+
+            <div className="study-section">
+              <h4>Challenge</h4>
+              <p>{study.problem}</p>
+            </div>
+
+            <div className="study-section">
+              <h4>Solution</h4>
+              <p>{study.solution}</p>
+            </div>
+
+            <div className="study-results">
+              {Object.entries(study.results).map(([key, value]) => (
+                <div key={key} className="result-item">
+                  <span className="result-value">{value}</span>
+                  <span className="result-label">{key}</span>
+                </div>
+              ))}
+            </div>
+
+            <div className="study-tags">
+              {study.technologies.map((tech) => (
+                <span key={tech} className="pill tech-pill">
+                  {tech}
+                </span>
+              ))}
+            </div>
+
+            <Link className="btn btn-ghost" to={`/case-studies/${study.slug}`}>
+              Read full case study
+            </Link>
+          </motion.article>
         ))}
       </div>
-    </motion.div>
+    </motion.section>
   );
 }
 

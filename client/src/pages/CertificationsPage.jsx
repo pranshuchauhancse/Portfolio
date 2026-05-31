@@ -1,30 +1,24 @@
 import React from "react";
-import { motion } from "framer-motion";
+import Seo from "../components/Seo";
 import Certifications from "../components/Certifications";
 import { certifications } from "../data/certifications";
 
 function CertificationsPage() {
   return (
-    <motion.div
-      className="page certifications-page"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.4 }}
-    >
-      <div className="page-container">
-        <motion.div
-          className="page-header"
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-        >
-          <h1>Certifications & Credentials</h1>
-          <p>Professional certifications and courses I've completed to enhance my skills</p>
-        </motion.div>
+    <section className="section section-shell certifications-page">
+      <Seo
+        title="Certifications | Pranshu Chauhan"
+        description="Verified certifications and credentials that support Pranshu's full-stack and AI engineering expertise."
+      />
 
-        <Certifications certifications={certifications} />
+      <div className="page-header">
+        <p className="eyebrow">Certifications</p>
+        <h2>Verified credentials that strengthen my technical profile.</h2>
+        <p className="lead">A collection of certifications, training courses, and verified skills relevant for recruiters and hiring managers.</p>
       </div>
-    </motion.div>
+
+      <Certifications certifications={certifications} />
+    </section>
   );
 }
 
