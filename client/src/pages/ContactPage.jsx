@@ -5,7 +5,7 @@ import { sendContactMessage } from "../utils/sendContactMessage";
 
 const CONTACT_EMAIL = contact.email;
 const HAS_CONTACT_ENDPOINT = Boolean(
-  process.env.REACT_APP_CONTACT_ENDPOINT || process.env.REACT_APP_FORMSPREE_ENDPOINT
+  import.meta.env.VITE_CONTACT_ENDPOINT || import.meta.env.VITE_FORMSPREE_ENDPOINT
 );
 
 const toTelHref = (phoneNumber) => `tel:${String(phoneNumber).replace(/[^\d+]/g, "")}`;

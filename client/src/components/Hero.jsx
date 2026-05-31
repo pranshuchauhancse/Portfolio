@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import portrait from "../assets/portrait.jpg"; // TODO: Replace portrait.jpg with a WebP version under 100KB for production
+import portrait from "../assets/portrait.jpg";
 import { Link } from "../router";
 
 const kickerMotionProps = {

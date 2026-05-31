@@ -1,8 +1,8 @@
 function getEndpointUrl() {
-  const explicitEndpoint = process.env.REACT_APP_CONTACT_ENDPOINT;
+  const explicitEndpoint = import.meta.env.VITE_CONTACT_ENDPOINT;
   if (explicitEndpoint) return explicitEndpoint;
 
-  const formspreeEndpoint = process.env.REACT_APP_FORMSPREE_ENDPOINT;
+  const formspreeEndpoint = import.meta.env.VITE_FORMSPREE_ENDPOINT;
   if (formspreeEndpoint) return formspreeEndpoint;
 
   return null;
