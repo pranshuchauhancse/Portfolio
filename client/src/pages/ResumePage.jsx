@@ -92,8 +92,8 @@ function ResumePage() {
       <div className="resume-hero">
         <div>
           <p className="eyebrow">Resume</p>
-          <h1>Resume for internships, freelance work, and early-career product engineering roles.</h1>
-          <p className="lead">A structured overview of my experience, technical skills, and achievements for recruiters who value delivery-focused work.</p>
+          <h1>Structured experience for internships, freelance engagements, and product engineering roles.</h1>
+          <p className="lead">A recruiter-friendly overview of skills, engineering work, and product delivery accomplishments.</p>
         </div>
         <div className="resume-actions">
           <a className="btn btn-primary" href="mailto:pranshuchauhan121005@gmail.com?subject=Resume%20Request&body=Hi%20Pranshu%2C%20please%20share%20your%20latest%20resume.">

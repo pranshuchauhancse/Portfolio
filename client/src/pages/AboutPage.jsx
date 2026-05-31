@@ -14,41 +14,41 @@ function AboutPage() {
 
       <div className="page-header">
         <p className="eyebrow">About</p>
-        <h2>A modern engineer building products with clarity, speed, and technical depth.</h2>
-        <p className="lead">My career is defined by software that is easy to use, reliable to maintain, and strong enough to support early-stage product decisions.</p>
+        <h2>An engineer who builds product-ready software with clear technical execution.</h2>
+        <p className="lead">My work is grounded in clean architecture, reliable delivery, and practical AI integration for real user workflows.</p>
       </div>
 
       <div className="about-grid">
         <article className="card about-card">
           <h3>How I started</h3>
           <p>
-            I began by building projects for friends and school clubs, then moved into full-stack work that combined user-facing interfaces with backend systems.
-            That early curiosity has grown into a focus on engineering work that recruiters recognize as product-ready and execution-focused.
+            I began by building tools for student groups and academic projects, then expanded into full-stack systems that use modern frontend frameworks and API design.
+            Today I focus on engineering work that signals both practical delivery and technical reliability.
           </p>
         </article>
 
         <article className="card about-card">
           <h3>Why I build</h3>
           <p>
-            I build software to make complex workflows feel intuitive. I enjoy taking the noise out of technical problems and shipping reliable solutions that people can trust.
+            I solve problems where user-facing clarity meets backend stability. I enjoy turning technical complexity into interfaces and APIs that teams can trust.
           </p>
         </article>
 
         <article className="card about-card">
-          <h3>What excites me</h3>
+          <h3>What I focus on</h3>
           <ul className="bullets">
-            <li>AI-powered interfaces that reduce friction and improve decision-making.</li>
-            <li>Full-stack products with clear user journeys and clean operational behavior.</li>
-            <li>Engineering systems that are easy to maintain, extend, and ship quickly.</li>
+            <li>AI-aware product flows that improve decision-making and reduce friction.</li>
+            <li>Full-stack systems with predictable behavior and practical integration points.</li>
+            <li>Components and data structures that are easy to test, extend, and maintain.</li>
           </ul>
         </article>
 
         <article className="card about-card">
           <h3>Career goals</h3>
           <ul className="bullets">
-            <li>Join teams where I can deliver internship and freelance projects with strong product outcomes.</li>
-            <li>Work on AI-integrated applications that feel polished and practical.</li>
-            <li>Build professional full-stack systems that scale from MVP to production-ready.</li>
+            <li>Contribute to teams that ship internships, MVPs, and early-stage products fast.</li>
+            <li>Build web applications with strong engineering practices and measurable outcomes.</li>
+            <li>Grow as a developer who can bridge product thinking and technical delivery.</li>
           </ul>
         </article>
       </div>

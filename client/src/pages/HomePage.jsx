@@ -44,6 +44,7 @@ const spotlightCards = [
 
 function HomePage() {
   const featuredProjects = projects.filter((project) => project.featured).slice(0, 3);
+  const displayedProjects = featuredProjects.length > 0 ? featuredProjects : projects.slice(0, 3);
 
   return (
     <>
