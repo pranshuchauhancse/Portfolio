@@ -786,6 +786,7 @@ section,
   margin-bottom: 5px;
 }
 
+
 /*--------------------------------------------------------------
 # Skills Section
 --------------------------------------------------------------*/
@@ -828,36 +829,27 @@ section,
 }
 
 /*--------------------------------------------------------------
-# Premium Resume Viewer
+# Resume Viewer
 --------------------------------------------------------------*/
 
 .resume-book {
   width: 100%;
   max-width: 850px;
-  height: 1100px;
 
-  margin: auto;
+  /* A4 aspect ratio */
+  height: 1123px;
 
-  background: #ffffff;
+  margin: 0 auto;
 
-  border-radius: 18px;
+  background: #fff;
+
+  border-radius: 15px;
 
   overflow: hidden;
 
-  border-left: 8px solid #2563eb;
+  border: 1px solid #e5e7eb;
 
-  box-shadow:
-    0 15px 35px rgba(0, 0, 0, 0.12),
-    0 5px 15px rgba(0, 0, 0, 0.08);
-
-  transition: all 0.3s ease;
-}
-
-.resume-book:hover {
-  transform: translateY(-5px);
-  box-shadow:
-    0 20px 40px rgba(37, 99, 235, 0.15),
-    0 8px 20px rgba(0, 0, 0, 0.10);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.10);
 }
 
 .resume-book iframe {
@@ -867,20 +859,11 @@ section,
   display: block;
 }
 
-/* Download Button */
-
-.resume .btn-primary {
-  padding: 12px 30px;
-  border-radius: 10px;
-  font-weight: 600;
-  transition: 0.3s ease;
+@media (max-width: 991px) {
+  .resume-book {
+    height: 900px;
+  }
 }
-
-.resume .btn-primary:hover {
-  transform: translateY(-2px);
-}
-
-/* Mobile */
 
 @media (max-width: 768px) {
   .resume-book {
