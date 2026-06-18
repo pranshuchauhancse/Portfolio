@@ -187,6 +187,78 @@
   window.addEventListener("load", initSwiper);
 
   /**
+   * Contact form submission
+   */
+  const contactForm = document.querySelector('.php-email-form');
+  if (contactForm) {
+    const loadingMessage = contactForm.querySelector('.loading');
+    const errorMessage = contactForm.querySelector('.error-message');
+    const sentMessage = contactForm.querySelector('.sent-message');
+    const submitButton = contactForm.querySelector('button[type="submit"]');
+
+    contactForm.addEventListener('submit', async function(e) {
+      if (!loadingMessage || !errorMessage || !sentMessage || !submitButton) {
+        return;
+      }
+
+      e.preventDefault();
+
+      if (!contactForm.action) {
+        showContactError('The contact form endpoint is not configured.');
+        return;
+      }
+
+      setContactLoading(true);
+      errorMessage.classList.remove('d-block');
+      sentMessage.classList.remove('d-block');
+
+      try {
+        const response = await fetch(contactForm.action, {
+          method: contactForm.method || 'POST',
+          body: new FormData(contactForm),
+          headers: {
+            'Accept': 'application/json'
+          }
+        });
+
+        if (response.ok) {
+          sentMessage.classList.add('d-block');
+          contactForm.reset();
+          return;
+        }
+
+        let message = 'Unable to send your message right now. Please try again later.';
+        const contentType = response.headers.get('content-type') || '';
+
+        if (contentType.includes('application/json')) {
+          const data = await response.json();
+          if (Array.isArray(data.errors) && data.errors.length) {
+            message = data.errors.map(error => error.message).join(' ');
+          } else if (data.error) {
+            message = data.error;
+          }
+        }
+
+        throw new Error(message);
+      } catch (error) {
+        showContactError(error.message || 'Unable to send your message right now. Please try again later.');
+      } finally {
+        setContactLoading(false);
+      }
+    });
+
+    function setContactLoading(isLoading) {
+      loadingMessage.classList.toggle('d-block', isLoading);
+      submitButton.disabled = isLoading;
+    }
+
+    function showContactError(message) {
+      errorMessage.textContent = message;
+      errorMessage.classList.add('d-block');
+    }
+  }
+
+  /**
    * Correct scrolling position upon page load for URLs containing hash links.
    */
   window.addEventListener('load', function(e) {

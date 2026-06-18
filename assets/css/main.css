@@ -1100,7 +1100,7 @@ height: 500px;
   background: #ffffff;
   padding: 35px;
   border-radius: 18px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
 }
 
 @media (max-width: 575px) {
@@ -1122,7 +1122,7 @@ height: 500px;
 .contact .php-email-form input:focus,
 .contact .php-email-form textarea:focus {
   border-color: #0d6efd;
-  box-shadow: 0 0 0 3px rgba(13,110,253,0.15);
+  box-shadow: 0 0 0 3px rgba(13, 110, 253, 0.15);
 }
 
 .contact .php-email-form button[type=submit] {
@@ -1135,7 +1135,13 @@ height: 500px;
   transition: 0.3s ease;
 }
 
-.contact .php-email-form button[type=submit]:hover {
+.contact .php-email-form button[type=submit]:disabled {
+  cursor: not-allowed;
+  opacity: 0.75;
+  transform: none;
+}
+
+.contact .php-email-form button[type=submit]:not(:disabled):hover {
   background: #0b5ed7;
   transform: translateY(-2px);
 }
